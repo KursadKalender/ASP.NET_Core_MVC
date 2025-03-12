@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ProgrammersBlog.Shared.Data.Abstract
 {
     // tüm entityler tarafından ortak kullanılacak temel fonksiyonları burada tanımlayacağım.
-    // fonksiyonların soyut, abstract hallerini tanımladık. 
+    // fonksiyonların soyut, abstract halleri tanımlandı.
     public interface IEntityRepository<T> where T:class, IEntity, new() // buraya bir tip vereceğim ve verdiğim bu tipe göre repository işlemini yapacak.
     {
         Task<T> GetAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties); // lambda expressionlar predicate'dir. 
