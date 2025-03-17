@@ -38,9 +38,9 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 IsActive = true,
                 IsDeleted = false,
                 CreatedByName = "InitialCreate",
-                CreatedDate = DateTime.Now,
+                CreatedDate = new DateTime(2025, 03, 17, 12, 00, 00),
                 ModifiedByName = "InitialCreate",
-                ModifiedDate = DateTime.Now,
+                ModifiedDate = new DateTime(2025, 03, 17, 12, 00, 00),
                 Note = "Admin Rolüdür."
             });
         }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ProgrammersBlog.Data.Concrete.EntityFramework.Mappings;
 using ProgrammersBlog.Entities.Concrete;
 using System;
@@ -20,7 +21,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer($@"{connectionString}");
+            optionsBuilder.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = ProgrammersBlog; Trusted_Connection = True; Connect Timeout = 30; MultipleActiveResultSets = True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

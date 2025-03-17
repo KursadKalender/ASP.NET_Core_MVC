@@ -53,12 +53,13 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
                 IsActive = true,
                 IsDeleted = false,
                 CreatedByName = "InitialCreate",
-                CreatedDate = DateTime.Now,
+                CreatedDate = new DateTime(2025, 03, 17, 12, 00, 00),
                 ModifiedByName = "InitialCreate",
-                ModifiedDate = DateTime.Now,
+                ModifiedDate = new DateTime(2025, 03, 17, 12, 00, 00),
                 Description = "İlk Admin Kullanıcı",
                 Note = "Admin Kullanıcı",
-                PasswordHash = Encoding.ASCII.GetBytes("0192023a7bbd73250516f069df18b500") //MD5 Hashed Password-Admin123
+                PasswordHash = Encoding.ASCII.GetBytes("0192023a7bbd73250516f069df18b500"), //MD5 Hashed Password-Admin123,
+                Picture = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSX4wVGjMQ37PaO4PdUVEAliSLi8-c2gJ1zvQ&usqp=CAU" // Kullanıcı resmini çekmek için link
             });
         }
     }

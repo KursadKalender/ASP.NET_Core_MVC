@@ -29,6 +29,48 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Categories"); // Tabloya isim vermemiz gerekiyor.
 
+            builder.HasData(
+                new Category
+            {
+                ID = 1,
+                Name = "C#",
+                Description = "C# Programlama Dili ile ilgili en güncel bilgiler.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                Note = "C# Blog Kategorisi",
+            },
+                new Category
+            {
+                ID = 2,
+                Name = "C++",
+                Description = "C++ Programlama Dili ile ilgili en güncel bilgiler.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                Note = "C++ Blog Kategorisi",
+            },
+                new Category
+            {
+                ID = 3,
+                Name = "JavaScript",
+                Description = "JavaScript Programlama Dili ile ilgili en güncel bilgiler.",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = new DateTime(2025, 03, 17, 12, 00, 00),
+                Note = "JavaScript Blog Kategorisi",
+            }
+            );
+
         }
     }
 }
