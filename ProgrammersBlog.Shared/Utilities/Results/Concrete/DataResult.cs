@@ -22,7 +22,7 @@ namespace ProgrammersBlog.Shared.Utilities.Results.Concrete
             Data = data;    
         }
         public DataResult(ResultStatus resultStatus, string message, T data, Exception exception)
-        {
+        { 
             ResultStatus = resultStatus;
             Message = message;
             Data = data;
