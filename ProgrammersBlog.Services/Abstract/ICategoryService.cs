@@ -13,9 +13,10 @@ namespace ProgrammersBlog.Services.Abstract
     {
         Task<IDataResult<Category>> Get(int categoryID);
         Task<IDataResult<IList<Category>>> GetAll(); // Data döneceği için IDataResult kullanıyoruz.
+        Task<IDataResult<IList<Category>>> GetAllByNonDeleted();
         Task<IResult> Add(CategoryAddDto categoryAddDto, string createdByName); // Successs veya Error mesajı döneceğinden IResult kullanılacak. 
         Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName);
-        Task<IResult> Delete(int categoryID); // Sadece IsDeleted değerini 1'e çeker.
+        Task<IResult> Delete(int categoryID, string modifiedByName); // Sadece IsDeleted değerini 1'e çeker.
         Task<IResult> HardDelete(int categoryID); // Tamamen, veritabanından siler. 
     }
 }
