@@ -14,7 +14,7 @@ namespace ProgrammersBlog.Services.Abstract
         Task<IDataResult<ArticleDto>> Get(int articleID);
         Task<IDataResult<ArticleListDto>> GetAll(); // Data döneceği için IDataResult kullanıyoruz.
         Task<IDataResult<ArticleListDto>> GetAllByNonDeleted();
-        Task<IDataResult<ArticleListDto>> GetAllByNonDeletedAndCvtive(); // Hem silinmemiş hem aktif, tamamlanmış ve sorunsuz makaleleri göstermek için. 
+        Task<IDataResult<ArticleListDto>> GetAllByNonDeletedAndActive(); // Hem silinmemiş hem aktif, tamamlanmış ve sorunsuz makaleleri göstermek için. 
         Task<IDataResult<ArticleListDto>> GetAllByCategory(int categoryID);
         Task<IResult> Add(ArticleAddDto articleAddDto, string createdByName); // Successs veya Error mesajı döneceğinden IResult kullanılacak. 
         Task<IResult> Update(ArticleUpdateDto articleUpdateDto, string modifiedByName);
